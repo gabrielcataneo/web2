@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <title>Cadastrar Livro</title>
+    <title>Editar Livro</title>
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,8 @@
 <body>
 
     <div id="wrapper">
-    <!-- Sidebar -->
+
+        <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -60,49 +61,46 @@
                 
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
     <div id="page-content-wrapper">
             <div class="container-fluid">
                 <a href="img/menu.png" class="btn btn-default" id="menu-toggle"></a>
-          <div class="py-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <h1 class="">Cadastrar Livro</h1>
-                <br/>
-            <form>
-          <div class="form-group">
-            <label for="nomeDoLivro">Nome do Livro</label>
-            <input type="text" class="form-control" id="nomeDoLivro"  placeholder="Digite o nome do livro">
-          </div>
-          
-          <div class="form-group">
-            <label for="categoria">Categoria</label>
-            <select class="form-control" id="categoria">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="descricaoLivro">Descrição do Livro</label>
-            <textarea class="form-control" id="descricaoLivro" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="capaLivro">Capa do Livro</label>
-            <input type="file" class="form-control-file" id="capaLivro" aria-describedby="capaLivro">
-            <small id="capaLivro" class="form-text text-muted">Insira uma imagem tamanho tal x tal.</small>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-                  </form></div>
-              </div>
-            </div>
-          </div>
+        <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="" contenteditable="true">Editar Livro</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome do Livro</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Livro Nome 1</td>
+                <td><a href="livroEdita.html">Editar</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Livro Nome 2</td>
+                <td><a href="livroEdita.html">Editar</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Livro Nome 3</td>
+                <td><a href="livroEdita.html">Editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
                          
                     </div>
                 </div>
