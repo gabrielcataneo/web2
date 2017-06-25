@@ -12,7 +12,7 @@ import utils.BibliotecaList;
 public class BibliotecaDAO {
 	private Connection conn = ConnectorClass.getConnection();
 
-	public void cadastrarAluno (BibliotecaList biblioteca)
+	public void cadastrarBiblioteca (BibliotecaList biblioteca)
 	{
 		String query = "INSERT INTO biblioteca(codbib, nome, endereco) VALUES (?, ?, ?)";
 		

@@ -113,4 +113,23 @@ public List<FuncionarioList> buscarTodosFuncionario() {
 
     return funcionarios;
 }
+public void DeleteFuncionario(FuncionarioList funcionario) {
+    String query = "DELETE FROM funcionario (codfunc, nome, endereco, telefone, salario, codbib) VALUES (?, ?, ?, ?, ?, ?)";
+
+    try {
+        PreparedStatement preparador = conn.prepareStatement(query);
+        preparador.setInt(1, funcionario.getCodfunc());
+        preparador.setString(2, funcionario.getNome());
+        preparador.setString(3, funcionario.getEndereco());
+        preparador.setString(4, funcionario.getTelefone());
+        preparador.setString(5, funcionario.getSalario());
+        preparador.setInt(6, funcionario.getCodbib());
+        preparador.execute();
+        preparador.close();
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
 }

@@ -52,8 +52,19 @@ public class CategoriaDAO
 	        return categorias;
 	    }
 
-	 public void deleteCategoria(CategoriaList agencia) {
-	        
+	 public void DeleteCategoria(CategoriaList categoria) {
+	        String query = "DELETE FROM categoria (codcategoria, descricao) VALUES (?, ?)";
+
+	        try {
+	            PreparedStatement preparador = conn.prepareStatement(query);
+	            preparador.setInt(1, categoria.getCodcategoria());
+	            preparador.setString(2, categoria.getDescricao());
+	            preparador.execute();
+	            preparador.close();
+
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
 	    }
 
 }

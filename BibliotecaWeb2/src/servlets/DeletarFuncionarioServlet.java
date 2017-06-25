@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import database.BibliotecaDAO;
-import utils.BibliotecaList;
+import database.FuncionarioDAO;
+import utils.FuncionarioList;
 
 
-public class CadastrarBibliotecaServlet extends HttpServlet {
+public class DeletarFuncionarioServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CadastrarBibliotecaServlet() {
+    public DeletarFuncionarioServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,13 +28,15 @@ public class CadastrarBibliotecaServlet extends HttpServlet {
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // TODO Auto-generated method stub
 
-    int codbib = Integer.parseInt(request.getParameter("codbib"));
+    int codfunc = Integer.parseInt(request.getParameter("codfunc"));
     String nome = request.getParameter("nome");
     String endereco = request.getParameter("endereco");
+    String telefone = request.getParameter("telefone");
+    String salario = request.getParameter("salario");
+    int codbib = Integer.parseInt(request.getParameter("codbib"));
 
-
-    BibliotecaDAO bibliotecaDAO = new BibliotecaDAO();
-    BibliotecaList biblioteca = new BibliotecaList(codbib, nome, endereco);
-    bibliotecaDAO.cadastrarBiblioteca(biblioteca);
+    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+    FuncionarioList funcionario = new FuncionarioList(codfunc, nome, endereco, telefone, salario, codbib);
+    funcionarioDAO.DeleteFuncionario(funcionario);
 }
 }

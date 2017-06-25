@@ -21,7 +21,7 @@ public class LivroDAO {
 	            preparador.setInt(1, livro.getCodlivro());
 	            preparador.setString(2, livro.getTitulo());
 	            preparador.setString(3, livro.getEditora());
-	            preparador.setDouble(4, livro.getValor());
+	            preparador.setString(4, livro.getValor());
 	            preparador.setInt(5, livro.getCodcategoria());
 	            preparador.setInt(6, livro.getCodbib());
 	            preparador.setBoolean(7, livro.isSituacao());
@@ -41,7 +41,7 @@ public class LivroDAO {
             preparador.setInt(1, livro.getCodlivro());
             preparador.setString(2, livro.getTitulo());
             preparador.setString(3, livro.getEditora());
-            preparador.setDouble(4, livro.getValor());
+            preparador.setString(4, livro.getValor());
             preparador.setInt(5, livro.getCodcategoria());
             preparador.setInt(6, livro.getCodbib());
             preparador.setBoolean(7, livro.isSituacao());
@@ -69,7 +69,7 @@ public class LivroDAO {
             while (result.next()) {
                 int codlivro = result.getInt("codlivro");
                 String editora = result.getString("editora");
-                double valor = result.getDouble("valor");
+                String valor = result.getString("valor");
                 int codcategoria = result.getInt("codcategoria");
                 int codbib = result.getInt("codbib");
                 boolean Situacao = result.getBoolean("Situacao");
@@ -103,7 +103,7 @@ public class LivroDAO {
                 int codlivro = result.getInt("codlivro");
                 String titulo = result.getString("titulo");
                 String editora = result.getString("editora");
-                double valor = result.getDouble("valor");
+                String valor = result.getString("valor");
                 int codcategoria = result.getInt("codcategoria");
                 int codbib = result.getInt("codbib");
 

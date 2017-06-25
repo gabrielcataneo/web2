@@ -5,12 +5,12 @@ public class LivroList {
 	public int codlivro;
 	public String titulo;
 	public String editora;
-	public double valor;
+	public String valor;
 	public int codcategoria;
 	public int codbib;
 	public boolean Situacao;
 	
-	public LivroList (int codlivro, String titulo, String editora, double valor, int codcategoria, int codbib, boolean Situacao)
+	public LivroList (int codlivro, String titulo, String editora, String valor, int codcategoria, int codbib, boolean Situacao)
 	{
 		this.codlivro = codlivro;
 		this.titulo = titulo;
@@ -45,11 +45,11 @@ public class LivroList {
 		this.editora = editora;
 	}
 
-	public double getValor() {
+	public String getValor() {
 		return valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
 	}
 

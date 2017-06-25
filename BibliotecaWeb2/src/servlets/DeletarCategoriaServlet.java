@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import database.BibliotecaDAO;
-import utils.BibliotecaList;
+import database.LivroDAO;
+import utils.LivroList;
 
 
-public class CadastrarBibliotecaServlet extends HttpServlet {
+public class DeletarCategoriaServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CadastrarBibliotecaServlet() {
+    public DeletarCategoriaServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,13 +28,15 @@ public class CadastrarBibliotecaServlet extends HttpServlet {
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // TODO Auto-generated method stub
 
+    int codlivro = Integer.parseInt(request.getParameter("codlivro"));
+    String titulo = request.getParameter("titulo");
+    String editora = request.getParameter("editora");
+    String valor = request.getParameter("valor");
+    int codcategoria = Integer.parseInt(request.getParameter("codcategoria"));
     int codbib = Integer.parseInt(request.getParameter("codbib"));
-    String nome = request.getParameter("nome");
-    String endereco = request.getParameter("endereco");
 
-
-    BibliotecaDAO bibliotecaDAO = new BibliotecaDAO();
-    BibliotecaList biblioteca = new BibliotecaList(codbib, nome, endereco);
-    bibliotecaDAO.cadastrarBiblioteca(biblioteca);
+    LivroDAO livroDAO = new LivroDAO();
+    LivroList livro = new LivroList(codlivro, titulo, editora, valor, codcategoria, codbib, true);
+    livroDAO.cadastrarLivro(livro);
 }
 }

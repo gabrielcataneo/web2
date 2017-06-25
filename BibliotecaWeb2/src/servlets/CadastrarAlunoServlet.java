@@ -2,15 +2,12 @@ package servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import database.AlunoDAO;
 import utils.AlunoList;
-
-@WebServlet("/CadastrarAlunoServlet")
 
 public class CadastrarAlunoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -22,7 +19,6 @@ public class CadastrarAlunoServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-}
 
 /**
  * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
